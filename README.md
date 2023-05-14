@@ -1,7 +1,8 @@
 # QuoteOfTheDay
-group 10
-- vraj shah
+Group 10
+- Vraj Shah
 - Savan Savani
+- Mehulkumar Shrimali
 
 
 
