@@ -16,7 +16,11 @@ also avoid negative energy around.
 - Users can filter quotes based on themes such as success, happiness, love etc.
 - Users get to search for specific quotes or related keywords.
 - Users can mark quotes as their favourite and add it into favourites category.
+
 -user can get daily notifications to remind them to read quotes from the app.
+
 -user can share chosen quote on social media.
+
 -user can save it in library.
+
 -dark mode and normal mode of the app can be changed.
