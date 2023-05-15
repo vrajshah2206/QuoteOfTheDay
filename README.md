@@ -1,14 +1,14 @@
 # QuoteOfTheDay
 
-QuoteOfTheDay is an iOS app that motivates people on daily basis and help them to stay positive 
+QuoteOfTheDay is an iOS app that motivates people on daily basis and help them to stay positive
 also avoid negative energy around.
-
 
 ## Group 10
 
 - Vraj Shah
 - Savan Savani
 - Mehulkumar Shrimali
+- Vikas Vikas
 
 ## Features
 
