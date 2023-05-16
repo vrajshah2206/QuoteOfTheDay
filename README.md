@@ -13,17 +13,17 @@ also avoid negative energy around.
 ## Features
 
 - Users can see inspirational quote daily on the app
-- Users can filter quotes based on themes such as success, happiness, love etc.
+- Users can filter quotes based on tags that are searchable such as success, happiness, love etc.
 - Users get to search for specific quotes or related keywords.
-- Users can mark quotes as their favourite and add it into favourites category.
+- Users can bookmark quotes as their favourite and add it into favourites category.
 - Users can get daily notifications to remind them to read quotes from the app.
 - Users can share chosen quote on social media.
-- Users can save it in local device.
+- Users can save quotes as an image on local device.
 - Dark mode and normal mode of the app can be changed.
 - Users can generate random quote from available collection.
 - Users can access details about author of the quote such as name and their backgound.
-- Users can access daily archive quoute that was saved/uploaded.
-- Users can schedule time of notification.
+- Users can access daily archive/view history of quotes.
+- Users can schedule preferred and specific time of notification.
 - Users can add new quotes to thr database with name of author.
 - users can refer app to other user via social media.
 - Users gets an option about how to share the quote only text or with basic image.
