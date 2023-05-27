@@ -16,15 +16,15 @@ also avoid negative energy around.
 - Users can filter quotes based on tags that are searchable such as success, happiness, love etc.
 - Users get to search for specific quotes or related keywords.
 - Users can bookmark quotes as their favourite and add it into favourites category.
-- Users can get daily notifications to remind them to read quotes from the app.
 - Users can share chosen quote on social media.
 - Users can save quotes as an image on local device.
-- Dark mode and normal mode of the app can be changed.
+- Users can get to switch between Dark mode and normal mode of the app can be changed.
 - Users can generate random quote from available collection.
-- Users can access details about author of the quote such as name and their backgound.
+- Users can access details about author of the quote such as name and their background.
 - Users can access daily archive/view history of quotes.
-- Users can schedule preferred and specific time of notification.
-- Users can add new quotes to thr database with name of author.
-- users can refer app to other user via social media.
-- Users gets an option about how to share the quote only text or with basic image.
-- Users can have request correction of author.
+- Users get an option about how to share the quote only text or with basic image.
+- Users can update built-in quotes.
+- Users can get daily notifications to remind them to read quotes from the app.
+- Users can add widget on their home screen that will show current quote of the day.
+- Users will have an accessibility feature that allows them to listen to selected quote.
+- Users can track the progress bar that make a streak for continuously reading the quote on daily basis.
