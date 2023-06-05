@@ -2,11 +2,7 @@
 //  FavouriteView.swift
 //  QuoteOfTheDay
 //
-<<<<<<< Updated upstream
-//  Created by Mehul on 2023-06-04.
-=======
 //  Created by Savan Savani on 2023-06-04.
->>>>>>> Stashed changes
 //
 
 import SwiftUI
@@ -16,11 +12,7 @@ struct FavouriteView: View {
 
     var body: some View {
         VStack {
-<<<<<<< Updated upstream
-            Text("Favourites")
-=======
             Text("Favourite")
->>>>>>> Stashed changes
                 .font(.title)
                 .padding()
 
@@ -28,27 +20,6 @@ struct FavouriteView: View {
                 VStack(alignment: .leading) {
                     Text(quotes[index].quote)
                         .font(.headline)
-<<<<<<< Updated upstream
-                        .padding(10)
-                    Text("- \(quotes[index].author)")
-                        .font(.subheadline)
-                        .padding(10)
-                    Text("- \(quotes[index].category)")
-                        .font(.subheadline)
-                        .padding(10)
-                    Button(action: {
-                        quotes[index].favourite.toggle()
-                        updateFavoriteValue(quoteID: quotes[index].quote_id,
-                        isFavorite: quotes[index].favourite)
-                        if !quotes[index].favourite
-                        {
-                            self.quotes.remove(at: index)
-                            }
-                    }) {
-                        Image(systemName: quotes[index].favourite ? "heart.fill" : "heart")
-                            .foregroundColor(quotes[index].favourite ? .red : .black)
-                            .padding(10)
-=======
                     Text("- \(quotes[index].author)")
                         .font(.subheadline)
                     Text("- \(quotes[index].category)")
@@ -59,7 +30,6 @@ struct FavouriteView: View {
                     }) {
                         Image(systemName: quotes[index].favourite ? "heart.fill" : "heart")
                             .foregroundColor(quotes[index].favourite ? .red : .black)
->>>>>>> Stashed changes
                     }
                     Spacer()
                 }
