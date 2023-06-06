@@ -18,7 +18,7 @@ struct QuoteView: View {
                         Text(quotes[index].quote)
                             .font(.headline)
                             .foregroundColor(.white)
-                            .padding()
+                            .padding(25)
                             .multilineTextAlignment(.center)
                             .background(
                                 Rectangle()
@@ -34,9 +34,12 @@ struct QuoteView: View {
                             Button(action: {
                                 quotes[index].favourite.toggle()
                                 updateFavoriteValue(quoteID: quotes[index].quote_id, isFavorite: quotes[index].favourite)
+                                
+                    
                             }) {
                                 Image(systemName: quotes[index].favourite ? "heart.fill" : "heart")
                                     .foregroundColor(quotes[index].favourite ? .red : .black)
+                                    .padding(.bottom)
                             }
                         }
                     }

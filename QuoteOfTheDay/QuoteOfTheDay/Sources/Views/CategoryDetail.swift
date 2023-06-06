@@ -2,7 +2,7 @@
 //  CategoryDetail.swift
 //  QuoteOfTheDay
 //
-//  Created by Savan Savani on 2023-06-04.
+//  Created by vikas on 2023-06-04.
 //
 
 import SwiftUI
@@ -21,10 +21,13 @@ struct CategoryDetail: View {
                 VStack(alignment: .leading) {
                     Text(quote.quote)
                         .font(.headline)
+                        .padding(10)
                     Text("- \(quote.author)")
                         .font(.subheadline)
+                        .padding(10)
                     Text("- \(quote.category)")
                         .font(.subheadline)
+                        .padding(10)
                     
                     Spacer()
                 }

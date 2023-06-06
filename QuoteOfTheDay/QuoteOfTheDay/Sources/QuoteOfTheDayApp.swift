@@ -11,7 +11,8 @@ import SwiftUI
 struct QuoteOfTheDayApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DailyQuoteView()
+            //ContentView()
         }
     }
 }

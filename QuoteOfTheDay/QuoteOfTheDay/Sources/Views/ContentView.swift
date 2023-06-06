@@ -14,7 +14,7 @@ struct ContentView: View {
             QuoteView()
                 .tabItem {
                     Image(systemName: "text.quote")
-                    Text("Quote")
+                    Text("Quotes")
                 }.tag(1)
             
             FavouriteView()
@@ -22,6 +22,14 @@ struct ContentView: View {
                     Image(systemName: "heart.fill")
                     Text("Favourite")
                 }.tag(2)
+            
+            RandomQuoteView()
+                .tabItem {
+                    Image(systemName: "quote.bubble.fill")
+                    Text("Daily Quote")
+                }.tag(3)
+            
+            
         }.onAppear{
             selectedTab = 1
         }

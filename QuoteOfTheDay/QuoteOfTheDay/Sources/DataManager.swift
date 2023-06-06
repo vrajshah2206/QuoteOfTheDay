@@ -134,3 +134,4 @@ func FavouriteloaderFunction() -> [Quote]? {
         return nil
     }
 }
+
