@@ -13,10 +13,10 @@ struct CategoryDetail: View {
     
     var body: some View {
         VStack {
-            Text(category)
-                .font(.title)
-                .padding()
-            
+//            Text(category)
+//                .font(.title)
+//                .padding()
+//            
             List(quotes, id: \.quote_id) { quote in
                 VStack(alignment: .leading) {
                     Text(quote.quote)
@@ -25,9 +25,9 @@ struct CategoryDetail: View {
                     Text("- \(quote.author)")
                         .font(.subheadline)
                         .padding(10)
-                    Text("- \(quote.category)")
-                        .font(.subheadline)
-                        .padding(10)
+//                    Text("- \(quote.category)")
+//                        .font(.subheadline)
+//                        .padding(10)
                     
                     Spacer()
                 }
