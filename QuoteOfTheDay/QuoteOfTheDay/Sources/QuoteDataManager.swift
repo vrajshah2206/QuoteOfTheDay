@@ -8,24 +8,6 @@
 import Foundation
 
 
-//func loadQuotes() -> [Quote]? {
-//    guard let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-//        return nil
-//    }
-//
-//    let fileURL = documentsURL.appendingPathComponent("quotes.json")
-//
-//    do {
-//        let data = try Data(contentsOf: fileURL)
-//        let jsonData = try JSONDecoder().decode([String: [Quote]].self, from: data)
-//        return jsonData["quotes"]
-//    } catch {
-//        print("Error loading JSON data: \(error)")
-//        return nil
-//    }
-//}
-//
-
 func loadQuotes() -> [Quote]? {
     do {
         let fileManager = FileManager.default

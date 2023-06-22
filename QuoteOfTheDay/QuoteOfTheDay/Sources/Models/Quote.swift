@@ -13,4 +13,9 @@ struct Quote: Codable {
     let category: String
     let quote: String
     var favourite: Bool
+    let author_description : String?
+    let author_expertise : String?
+    let author_professions : String?
+    let author_achievements: String?
+    let author_detailed_data: String?
 }

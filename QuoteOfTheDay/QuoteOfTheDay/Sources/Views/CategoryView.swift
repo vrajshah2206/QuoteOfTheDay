@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CategoryView: View {
-//    let categories:[String] = Categories.categories
     
     let categories = [
         "Wisdom",

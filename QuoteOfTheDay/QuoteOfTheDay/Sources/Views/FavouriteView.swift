@@ -58,43 +58,6 @@ struct FavouriteView: View {
 }
 
 
-//struct FavouriteView: View {
-//    @StateObject private var quoteData = QuoteData()
-//
-//    var body: some View {
-//        VStack {
-//            Text("Favourite")
-//                .font(.title)
-//                .padding()
-//
-//            List(quoteData.quotes.indices, id: \.self) { index in
-//                VStack(alignment: .leading) {
-//                    Text(quoteData.quotes[index].quote)
-//                        .font(.headline)
-//                    Text("- \(quoteData.quotes[index].author)")
-//                        .font(.subheadline)
-//                    Text("- \(quoteData.quotes[index].category)")
-//                        .font(.subheadline)
-//                    Button(action: {
-//                        quoteData.quotes[index].favourite.toggle()
-//                        quoteData.updateFavoriteValue(quoteID: quoteData.quotes[index].quote_id, isFavorite: quoteData.quotes[index].favourite)
-//                    }) {
-//                        Image(systemName: quoteData.quotes[index].favourite ? "heart.fill" : "heart")
-//                            .foregroundColor(quoteData.quotes[index].favourite ? .red : .black)
-//                    }
-//                    Spacer()
-//                }
-//                .padding()
-//            }
-//            Spacer()
-//        }
-//        .navigationTitle("Favourite")
-//        .onAppear {
-//            quoteData.loadQuotesFromFavorites()
-//        }
-//    }
-//}
-
 struct FavouriteView_Previews: PreviewProvider {
     static var previews: some View {
         FavouriteView()

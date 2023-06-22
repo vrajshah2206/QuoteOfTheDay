@@ -26,7 +26,7 @@ struct ContentView: View {
             RandomQuoteView()
                 .tabItem {
                     Image(systemName: "quote.bubble.fill")
-                    Text("Daily Quote")
+                    Text("Random Quote")
                 }.tag(3)
             
             

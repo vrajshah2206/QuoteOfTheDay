@@ -43,7 +43,9 @@
             "quote": "To live is the rarest thing in the world. Most people exist, that is all.",
             "favourite": false,
             "author_description": "Oscar Wilde was an Irish poet and playwright. He is best remembered for his wit, flamboyant style, and plays like 'The Importance of Being Earnest' and 'The Picture of Dorian Gray'.",
-            "author_expertise": "Playwriting, Poetry",
+            "author_expertise
+            
+            ": "Playwriting, Poetry",
             "author_professions": "Playwright, Poet",
             "author_achievements": "None specified",
             "author_detailed_data": "Oscar Wilde's writing is characterized by his clever wordplay, satirical social commentary, and exploration of aestheticism. His plays and poetry continue to be celebrated for their wit and literary merit. Wilde's flamboyant personality and sharp wit made him one of the most memorable figures of the late 19th century."
@@ -90,7 +92,9 @@
             "category": "Innovation",
             "quote": "Innovation distinguishes between a leader and a follower.",
             "favourite": true,
-            "author_description": "Steve Jobs was an American entrepreneur and co-founder of Apple Inc. He played a pivotal role in the development of personal computers and consumer electronics.",
+            "author_description": "Steve Jobs was an American entrepreneur and co-founder of Apple
+            
+            Inc. He played a pivotal role in the development of personal computers and consumer electronics.",
             "author_expertise": "Entrepreneurship, Technology",
             "author_professions": "Entrepreneur, Inventor",
             "author_achievements": "Co-founder of Apple Inc.",
@@ -135,7 +139,9 @@
         {
             "quote_id": 12,
             "author": "Walt Disney",
-            "category":"Dreams",
+            "category":
+            
+            "Dreams",
             "quote": "All our dreams can come true, if we have the courage to pursue them.",
             "favourite": true,
             "author_description": "Walt Disney was an American entrepreneur, animator, and film producer. He co-founded The Walt Disney Company and is known for creating iconic characters like Mickey Mouse.",
@@ -225,6 +231,8 @@
             "author_description": "Abraham Lincoln was the 16th President of the United States. He led the country through its Civil War, preserved the Union, and ended slavery.",
             "author_expertise": "Leadership, Politics",
             "author_professions": "Politician, Lawyer",
+            
+            
             "author_achievements": "16th President of the United States",
             "author_detailed_data": "Abraham Lincoln's leadership during a time of great adversity and his commitment to preserving the Union and abolishing slavery have made him one of the most revered U.S. presidents. His eloquence, integrity, and ability to unite a divided nation continue to inspire leaders today."
         },
@@ -269,7 +277,9 @@
             "author": "Mark Twain",
             "category": "Humor",
             "quote": "The secret of getting ahead is getting started.",
-            "favourite":true,
+            "favourite":
+            
+            true,
             "author_description": "Mark Twain, born Samuel Clemens, was an American writer, humorist, and lecturer. He is best known for his novels 'The Adventures of Tom Sawyer' and 'Adventures of Huckleberry Finn'.",
             "author_expertise": "Writing, Humor",
             "author_professions": "Writer, Humorist, Lecturer",
@@ -518,6 +528,8 @@
         },
         {
             "quote_id": 44,
+            
+            
             "author": "Nelson Mandela",
             "category": "Freedom",
             "quote": "For to be free is not merely to cast off one's chains, but to live in a way that respects and enhances the freedom of others.",
