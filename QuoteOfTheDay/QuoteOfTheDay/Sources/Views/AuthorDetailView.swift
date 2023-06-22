@@ -2,7 +2,11 @@
 //  AuthorDetailView.swift
 //  QuoteOfTheDay
 //
+<<<<<<< Updated upstream
 //  Created by Savan Savani on 2023-06-22.
+=======
+//  Created by Mehul on 2023-06-22.
+>>>>>>> Stashed changes
 //
 
 import SwiftUI
@@ -25,6 +29,13 @@ struct AuthorDetailView: View {
                 .font(.body)
                 .padding()
             
+<<<<<<< Updated upstream
+=======
+            Text("Detailed Data:\n\(detailedData)")
+                .font(.body)
+                .padding()
+            
+>>>>>>> Stashed changes
             Text("Expertise: \(expertise)")
                 .font(.body)
                 .padding()
@@ -37,10 +48,13 @@ struct AuthorDetailView: View {
                 .font(.body)
                 .padding()
             
+<<<<<<< Updated upstream
             Text("Detailed Data:\n\(detailedData)")
                 .font(.body)
                 .padding()
             
+=======
+>>>>>>> Stashed changes
             Spacer()
         }
         .navigationTitle("Author Details")
