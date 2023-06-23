@@ -53,11 +53,7 @@
             "author": "Martin Luther King Jr.",
             "category": "Justice",
             "quote": "Injustice anywhere is a threat to justice everywhere.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Martin Luther King Jr. was an American minister and civil rights leader. He is best known for his role in the advancement of civil rights using nonviolent civil disobedience based on his Christian beliefs.",
             "author_expertise": "Civil Rights, Nonviolence",
             "author_professions": "Minister, Civil Rights Activist",
@@ -81,11 +77,7 @@
             "author": "William Shakespeare",
             "category": "Love",
             "quote": "Love all, trust a few, do wrong to none.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "William Shakespeare was an English playwright, poet, and actor. He is widely regarded as the greatest writer in the English language and the world's preeminent dramatist.",
             "author_expertise": "Drama, Poetry",
             "author_professions": "Playwright, Poet, Actor",
@@ -97,11 +89,7 @@
             "author": "Steve Jobs",
             "category": "Innovation",
             "quote": "Innovation distinguishes between a leader and a follower.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Steve Jobs was an American entrepreneur and co-founder of Apple Inc. He played a pivotal role in the development of personal computers and consumer electronics.",
             "author_expertise": "Entrepreneurship, Technology",
             "author_professions": "Entrepreneur, Inventor",
@@ -125,11 +113,7 @@
             "author": "Nelson Mandela",
             "category": "Courage",
             "quote": "The brave man is not he who does not feel afraid, but he who conquers that fear.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Nelson Mandela was a South African anti-apartheid revolutionary and political leader. He served as President of South Africa from 1994 to 1999.",
             "author_expertise": "Anti-apartheid, Leadership",
             "author_professions": "Revolutionary, Politician",
@@ -153,11 +137,7 @@
             "author": "Walt Disney",
             "category":"Dreams",
             "quote": "All our dreams can come true, if we have the courage to pursue them.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Walt Disney was an American entrepreneur, animator, and film producer. He co-founded The Walt Disney Company and is known for creating iconic characters like Mickey Mouse.",
             "author_expertise": "Animation, Entertainment",
             "author_professions": "Entrepreneur, Animator, Film Producer",
@@ -169,11 +149,7 @@
             "author": "Malala Yousafzai",
             "category": "Education",
             "quote": "One child, one teacher, one book, one pen can change the world.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Malala Yousafzai is a Pakistani activist for female education and the youngest Nobel Prize laureate. She advocates for girls' right to education and has become a global symbol of female empowerment.",
             "author_expertise": "Female Education, Activism",
             "author_professions": "Activist",
@@ -197,11 +173,7 @@
             "author": "Mother Teresa",
             "category": "Compassion",
             "quote": "Spread love everywhere you go. Let no one ever come to you without leaving happier.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Mother Teresa, born Anjezë Gonxhe Bojaxhiu, was an Albanian-Indian Roman Catholic nun and missionary. She dedicated her life to helping the poor and marginalized in India.",
             "author_expertise": "Charity, Humanitarianism",
             "author_professions": "Nun, Missionary",
@@ -225,11 +197,7 @@
             "author": "Helen Keller",
             "category": "Perseverance",
             "quote": "The only thing worse than being blind is having sight but no vision.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Helen Keller was an American author, lecturer, and political activist. She was the first deaf-blind person to earn a Bachelor of Arts degree and became an advocate for people with disabilities.",
             "author_expertise": "Disability Advocacy, Writing",
             "author_professions": "Author, Lecturer, Political Activist",
@@ -265,11 +233,7 @@
             "author": "Maya Angelou",
             "category": "Empowerment",
             "quote": "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Maya Angelou was an American poet, memoirist, and civil rights activist. She is best known for her series of autobiographies, including 'I Know Why the Caged Bird Sings'.",
             "author_expertise": "Poetry, Memoir",
             "author_professions": "Poet, Memoirist, Activist",
@@ -281,11 +245,7 @@
             "author": "Albert Einstein",
             "category": "Knowledge",
             "quote": "The true sign of intelligence is not knowledge but imagination.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics.",
             "author_expertise": "Physics, Mathematics",
             "author_professions": "Physicist",
@@ -309,11 +269,7 @@
             "author": "Mark Twain",
             "category": "Humor",
             "quote": "The secret of getting ahead is getting started.",
-<<<<<<< Updated upstream
-            "favourite":true,
-=======
             "favourite":false,
->>>>>>> Stashed changes
             "author_description": "Mark Twain, born Samuel Clemens, was an American writer, humorist, and lecturer. He is best known for his novels 'The Adventures of Tom Sawyer' and 'Adventures of Huckleberry Finn'.",
             "author_expertise": "Writing, Humor",
             "author_professions": "Writer, Humorist, Lecturer",
@@ -337,11 +293,7 @@
             "author": "Vincent Van Gogh",
             "category": "Passion",
             "quote": "I would rather die of passion than of boredom.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Vincent Van Gogh was a Dutch post-impressionist painter who is considered one of the most influential figures in Western art history. He created over 2,000 artworks during his life.",
             "author_expertise": "Painting",
             "author_professions": "Painter",
@@ -365,11 +317,7 @@
             "author": "Steve Jobs",
             "category": "Innovation",
             "quote": "Innovation distinguishes between a leader and a follower.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Steve Jobs was an American business magnate, industrial designer, and co-founder of Apple Inc. He played a pivotal role in the development of revolutionary products such as the iPhone and iPad.",
             "author_expertise": "Technology, Design",
             "author_professions": "Entrepreneur, Industrial Designer",
@@ -393,11 +341,7 @@
             "author": "Nelson Mandela",
             "category": "Freedom",
             "quote": "For to be free is not merely to cast off one's chains, but to live in a way that respects and enhances the freedom of others.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Nelson Mandela was a South African anti-apartheid revolutionary, political leader, and philanthropist who served as the President of South Africa from 1994 to 1999. He was a symbol of resistance against racial inequality and injustice.",
             "author_expertise": "Civil Rights, Politics",
             "author_professions": "Revolutionary, Politician, Philanthropist",
@@ -409,11 +353,7 @@
             "author": "Coco Chanel",
             "category": "Style",
             "quote": "Fashion fades, only style remains the same.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Coco Chanel was a French fashion designer and businesswoman. She revolutionized women's fashion in the early 20th century with her simple and elegant designs, including the little black dress and the Chanel suit.",
             "author_expertise": "Fashion, Design",
             "author_professions": "Fashion Designer, Businesswoman",
@@ -425,11 +365,7 @@
             "author": "Martin Luther King Jr.",
             "category": "Justice",
             "quote": "Injustice anywhere is a threat to justice everywhere.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Martin Luther King Jr. was an American Baptist minister and civil rights leader. He is best known for his role in advancing civil rights through nonviolent civil disobedience based on his Christian beliefs.",
             "author_expertise": "Civil Rights Activism",
             "author_professions": "Minister, Civil Rights Leader",
@@ -465,11 +401,7 @@
             "author": "Malala Yousafzai",
             "category": "Education",
             "quote": "One child, one teacher, one book, one pen can change the world.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Malala Yousafzai is a Pakistani activist for female education and the youngest Nobel Prize laureate. She advocates for girls' right to education and has become a global symbol of female empowerment.",
             "author_expertise": "Female Education, Activism",
             "author_professions": "Activist",
@@ -493,11 +425,7 @@
             "author": "Mother Teresa",
             "category": "Compassion",
             "quote": "Not all of us can do great things. But we can do small things with great love.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Mother Teresa, born Anjezë Gonxhe Bojaxhiu, was an Albanian-Indian Roman Catholic nun and missionary. She dedicated her life to serving the poor and destitute in Kolkata, India.",
             "author_expertise": "Humanitarianism, Service",
             "author_professions": "Nun, Missionary",
@@ -509,11 +437,7 @@
             "author": "Leonardo da Vinci",
             "category": "Creativity",
             "quote": "Simplicity is the ultimate sophistication.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Leonardo da Vinci was an Italian polymath of the Renaissance period. He was a painter, sculptor, architect, musician, mathematician, engineer, inventor, anatomist, geologist, botanist, and writer.",
             "author_expertise": "Art, Science, Invention",
             "author_professions": "Painter, Sculptor, Architect, Musician, Mathematician, Engineer, Inventor, Anatomist, Geologist, Botanist, Writer",
@@ -561,11 +485,7 @@
             "author": "Rosa Parks",
             "category": "Courage",
             "quote": "I would like to be remembered as a person who wanted to be free... so other people would be also free.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Rosa Parks was an African American civil rights activist. She is best known for her pivotal role in the Montgomery bus boycott, which was a catalyst for the civil rights movement.",
             "author_expertise": "Civil Rights Activism",
             "author_professions": "Civil Rights Activist",
@@ -589,11 +509,7 @@
             "author": "Eleanor Roosevelt",
             "category": "Empowerment",
             "quote": "No one can make you feel inferior without your consent.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Eleanor Roosevelt was an American political figure, diplomat, and activist. She served as the First Lady of the United States from 1933 to 1945 and was a prominent advocate for civil rights and human rights.",
             "author_expertise": "Politics, Civil Rights Activism",
             "author_professions": "Diplomat, Activist",
@@ -617,11 +533,7 @@
             "author": "Stephen Hawking",
             "category": "Knowledge",
             "quote": "The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Stephen Hawking was an English theoretical physicist, cosmologist, and author. He made significant contributions to the field of theoretical physics and was known for his work on black holes and the nature of the universe.",
             "author_expertise": "Theoretical Physics, Cosmology",
             "author_professions": "Physicist, Cosmologist, Author",
@@ -657,11 +569,7 @@
             "author": "Harriet Tubman",
             "category": "Freedom",
             "quote": "I freed a thousand slaves. I could have freed a thousand more if only they knew they were slaves.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Harriet Tubman was an African American abolitionist, humanitarian, and Union spy during the American Civil War. She played a vital role in the Underground Railroad, helping enslaved individuals escape to freedom.",
             "author_expertise": "Abolitionism, Humanitarianism",
             "author_professions": "Abolitionist, Humanitarian, Union Spy",
@@ -685,11 +593,7 @@
             "author": "Marie Curie",
             "category": "Scientific Discovery",
             "quote": "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.",
-<<<<<<< Updated upstream
-            "favourite": true,
-=======
             "favourite": false,
->>>>>>> Stashed changes
             "author_description": "Marie Curie was a Polish-born physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize and remains the only person to win Nobel Prizes in two different scientific fields.",
             "author_expertise": "Physics, Chemistry",
             "author_professions": "Physicist, Chemist",
