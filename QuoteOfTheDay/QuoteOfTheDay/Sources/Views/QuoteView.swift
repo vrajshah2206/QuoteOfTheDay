@@ -56,13 +56,12 @@ struct QuoteView: View {
                                     Button(action: {
                                         toggleFavorite(for: filteredQuotes[index])
                                     }) {
-<<<<<<< HEAD
                                         Image(systemName: quotes[index].favourite ? "heart.fill" : "heart")
                                             .foregroundColor(quotes[index].favourite ? .red : colorScheme == .light ? .black : .white)
-=======
+
                                         Image(systemName: filteredQuotes[index].favourite ? "heart.fill" : "heart")
                                             .foregroundColor(filteredQuotes[index].favourite ? .red : .black)
->>>>>>> 05eade8e604c35209e1a87af4fea098aae561d2e
+
                                             .padding(.bottom)
                                     }
                                 }
