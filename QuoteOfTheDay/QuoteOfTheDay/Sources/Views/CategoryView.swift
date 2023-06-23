@@ -53,12 +53,16 @@ struct CategoryView: View {
                         ForEach(categories, id: \.self) { category in
                             NavigationLink(destination: CategoryDetail(category: category)) {
                                 Rectangle()
-                                    .foregroundColor(.blue)
+                                    .fill(LinearGradient(
+                                        gradient: Gradient(colors: [.purple, .orange]),
+                                                  startPoint: .topLeading,
+                                        endPoint: .bottomTrailing
+                                              ))
                                     .frame(height: 150)
                                     .overlay(
                                         Text(category)
                                             .foregroundColor(.white)
-                                            .font(.title)
+                                            .font(.title3)
                                     )
                                     .cornerRadius(10)
                                     .padding()
