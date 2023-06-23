@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct QuoteView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     @State private var quotes: [Quote] = loadQuotes() ?? []
     
     var body: some View {
@@ -19,16 +21,16 @@ struct QuoteView: View {
                         VStack {
                             Text(quotes[index].quote)
                                 .font(.headline)
-                                .foregroundColor(.white)
+                                .foregroundColor(colorScheme == .light ? .white : .black)
                                 .padding(25)
                                 .multilineTextAlignment(.center)
                                 .frame(width: 350, height: 230)
                                 .background(
                                     RoundedRectangle(cornerRadius: 20)
                                         .fill(LinearGradient(
-                                            gradient: Gradient(colors: [.purple, .orange]),
-                                                      startPoint: .topLeading,
-                                            endPoint: .center
+                                            gradient: Gradient(colors: [colorScheme == .light ? .purple : .gray, colorScheme == .light ? .orange : .white]),
+                                            startPoint: .bottomLeading,
+                                            endPoint: .bottomTrailing
                                                   ))
                                         .frame(width: 350, height: 200)
                                 )
@@ -43,7 +45,7 @@ struct QuoteView: View {
                                 HStack {
                                     Text("- \(quotes[index].author)")
                                         .font(.subheadline)
-                                        .foregroundColor(.gray)
+                                        .foregroundColor(colorScheme == .light ? .gray : .white)
                                         .padding(.bottom)
                                     Button(action: {
                                         quotes[index].favourite.toggle()
@@ -52,7 +54,7 @@ struct QuoteView: View {
                                         
                                     }) {
                                         Image(systemName: quotes[index].favourite ? "heart.fill" : "heart")
-                                            .foregroundColor(quotes[index].favourite ? .red : .black)
+                                            .foregroundColor(quotes[index].favourite ? .red : colorScheme == .light ? .black : .white)
                                             .padding(.bottom)
                                     }
                                 }

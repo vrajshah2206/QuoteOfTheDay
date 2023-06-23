@@ -4,7 +4,9 @@ struct ContentView: View {
     
     @State private var selectedTab = 1
     var body: some View {
+        
         TabView(selection: $selectedTab) {
+          
             CategoryView()
                 .tabItem {
                     Image(systemName: "list.bullet")

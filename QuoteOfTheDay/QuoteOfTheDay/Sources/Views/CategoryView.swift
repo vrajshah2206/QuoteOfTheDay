@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CategoryView: View {
+    @Environment(\.colorScheme) var colorScheme
     
     let categories = [
         "Wisdom",
@@ -54,14 +55,14 @@ struct CategoryView: View {
                             NavigationLink(destination: CategoryDetail(category: category)) {
                                 Rectangle()
                                     .fill(LinearGradient(
-                                        gradient: Gradient(colors: [.purple, .orange]),
+                                        gradient: Gradient(colors: [colorScheme == .light ? .purple : .gray, colorScheme == .light ? .orange : .white]),
                                                   startPoint: .topLeading,
                                         endPoint: .bottomTrailing
                                               ))
                                     .frame(height: 150)
                                     .overlay(
                                         Text(category)
-                                            .foregroundColor(.white)
+                                            .foregroundColor(colorScheme == .light ? .white : .black)
                                             .font(.title3)
                                     )
                                     .cornerRadius(10)
