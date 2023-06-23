@@ -28,11 +28,17 @@ struct QuoteView: View {
                                 .foregroundColor(.white)
                                 .padding(25)
                                 .multilineTextAlignment(.center)
+                                .frame(width: 350, height: 230)
                                 .background(
-                                    Rectangle()
-                                        .foregroundColor(.blue)
-                                        .cornerRadius(10)
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .fill(LinearGradient(
+                                            gradient: Gradient(colors: [.purple, .orange]),
+                                                      startPoint: .topLeading,
+                                            endPoint: .center
+                                                  ))
+                                        .frame(width: 350, height: 200)
                                 )
+                    
                             
                             NavigationLink(destination: AuthorDetailView(author: filteredQuotes[index].author,
                                                                          description: filteredQuotes[index].author_description ?? "",
@@ -53,7 +59,7 @@ struct QuoteView: View {
                                             .padding(.bottom)
                                     }
                                 }
-                            }
+                            } .frame(width: 350, height: 70, alignment: .trailing)
                         }
                         .padding(.horizontal)
                     }
