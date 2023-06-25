@@ -40,15 +40,23 @@ struct DailyQuoteView: View {
             ContentView()
         } else {
             ZStack {
+                Color.blue // Background color
+                
                 VStack {
                     Text("Quote Of The Day")
                         .font(.largeTitle)
-                        .padding(.bottom, 20)
+                        .foregroundColor(.white)
+                        .padding(.top, 90)
                     
                     Text("Current Streak: \(streak) days")
-                        .font(.title)
+                        .font(.subheadline)
+                        .foregroundColor(.white)
+                        .padding(.top, 20)
                 }
-                .position(x: 200, y: 200)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                .background(
+                    LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.7), Color.blue]), startPoint: .top, endPoint: .bottom)
+                )
                 
                 VStack {
                     Spacer()
@@ -58,9 +66,11 @@ struct DailyQuoteView: View {
                             .font(.title)
                             .multilineTextAlignment(.center)
                             .padding()
+                            .foregroundColor(.white)
                         
                         Text("- \(randomQuote.author)")
                             .font(.title2)
+                            .foregroundColor(.white)
                     }
                     .scaleEffect(size)
                     .opacity(opacity)
@@ -74,6 +84,7 @@ struct DailyQuoteView: View {
                     Spacer()
                 }
             }
+            .edgesIgnoringSafeArea(.all)
             .onAppear {
                 updateStreak()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
@@ -84,11 +95,52 @@ struct DailyQuoteView: View {
     }
     
     private func updateStreak() {
-        streak = StreakManager.getCurrentStreak()
-        StreakManager.updateStreak()
+        let currentDate: String = {
+            let now = Date()
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .none
+            return formatter.string(from: now)
+        }()
+        
+        var savedDate = UserDefaults.standard.string(forKey: "DateSaved")
+        
+        if let savedDate = savedDate {
+            let streak = UserDefaults.standard.integer(forKey: "CountOfStreak")
+            let differenceInDays: Int? = {
+                let formatter = DateFormatter()
+                formatter.dateStyle = .medium
+                formatter.timeStyle = .none
+                guard let currentDate = formatter.date(from: currentDate),
+                      let yesterdayDate = formatter.date(from: savedDate) else {
+                    return nil
+                }
+                let calendar = Calendar.current
+                let components = calendar.dateComponents([.day], from: yesterdayDate, to: currentDate)
+                return components.day
+            }()
+            
+            if let differenceInDays = differenceInDays {
+                if differenceInDays == 0 {
+                    UserDefaults.standard.set(streak + 0, forKey: "CountOfStreak")
+                } else if differenceInDays == 1 {
+                    UserDefaults.standard.set(streak + 1, forKey: "CountOfStreak")
+                } else {
+                    UserDefaults.standard.set(0, forKey: "CountOfStreak")
+                }
+            } else {
+                UserDefaults.standard.set(0, forKey: "CountOfStreak")
+            }
+            
+            UserDefaults.standard.set(currentDate, forKey: "DateSaved")
+            self.streak = UserDefaults.standard.integer(forKey: "CountOfStreak")
+        } else {
+            UserDefaults.standard.set(currentDate, forKey: "DateSaved")
+            UserDefaults.standard.set(0, forKey: "CountOfStreak")
+            self.streak = 0
+        }
     }
 }
-
 struct DailyQuoteView_Previews: PreviewProvider {
     static var previews: some View {
         DailyQuoteView()

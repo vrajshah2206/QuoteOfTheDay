@@ -1,19 +1,12 @@
-//
-//  CategoryDetail.swift
-//  QuoteOfTheDay
-//
-//  Created by vikas on 2023-06-04.
-//
-
 import SwiftUI
 
 struct CategoryDetail: View {
     let category: String
     @State private var quotes: [Quote] = []
-    
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         VStack {
-
             List(quotes, id: \.quote_id) { quote in
                 VStack(alignment: .leading) {
                     Text(quote.quote)
@@ -21,10 +14,23 @@ struct CategoryDetail: View {
                         .padding(10)
                     Text("- \(quote.author)")
                         .font(.subheadline)
-                        .padding(10)            
+                        .padding(10)
                     Spacer()
                 }
                 .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(LinearGradient(
+                            gradient: Gradient(colors: [colorScheme == .light ? .purple : .gray, colorScheme == .light ? .orange : .white]),
+                            startPoint: .bottomLeading,
+                            endPoint: .bottomTrailing
+                        ))
+                        .padding(.vertical, -10)
+                        .padding(.horizontal, -60)
+                )
+                .padding(.vertical,20)
+                .foregroundColor(colorScheme == .light ? .white : .black)
+                .listRowSeparator(.hidden)
             }
             Spacer()
         }

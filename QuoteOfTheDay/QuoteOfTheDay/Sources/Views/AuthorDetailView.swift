@@ -16,32 +16,62 @@ struct AuthorDetailView: View {
     let detailedData: String
     
     var body: some View {
-        VStack {
-            Text(author)
-                .font(.title)
-                .padding()
-            
-            Text(description)
-                .font(.body)
-                .padding()
-            
-
-            Text("Expertise: \(expertise)")
-                .font(.body)
-                .padding()
-            
-            Text("Professions: \(professions)")
-                .font(.body)
-                .padding()
-            
-            Text("Achievements: \(achievements)")
-                .font(.body)
-                .padding()
-                        Text("Detailed Data:\n\(detailedData)")
-                .font(.body)
-                .padding()
-            
-            Spacer()
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                Text(author)
+                    .font(.largeTitle)
+                    .padding(.horizontal)
+                
+                Text(description)
+                    .font(.body)
+                    .multilineTextAlignment(.leading)
+                    .padding(.horizontal)
+                
+                Divider()
+                
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Expertise:")
+                        .font(.headline)
+                    
+                    Text(expertise)
+                        .font(.body)
+                        .multilineTextAlignment(.leading)
+                }
+                .padding(.horizontal)
+                
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Professions:")
+                        .font(.headline)
+                    
+                    Text(professions)
+                        .font(.body)
+                        .multilineTextAlignment(.leading)
+                }
+                .padding(.horizontal)
+                
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Achievements:")
+                        .font(.headline)
+                    
+                    Text(achievements)
+                        .font(.body)
+                        .multilineTextAlignment(.leading)
+                }
+                .padding(.horizontal)
+                
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Detailed Data:")
+                        .font(.headline)
+                    
+                    Text(detailedData)
+                        .font(.body)
+                        .multilineTextAlignment(.leading)
+                }
+                .padding(.horizontal)
+                
+                Spacer()
+            }
+            .padding(.vertical)
         }
         .navigationTitle("Author Details")
     }
