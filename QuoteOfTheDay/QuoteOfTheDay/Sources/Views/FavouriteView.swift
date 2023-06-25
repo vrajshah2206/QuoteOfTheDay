@@ -8,51 +8,48 @@
 import SwiftUI
 
 struct FavouriteView: View {
-    @State private var quotes: [Quote] = []
-
+    @ObservedObject var quoteData = QuoteData()
+    
     var body: some View {
         VStack {
             Text("Favourites")
                 .font(.title)
                 .padding()
-
-            List(quotes.indices, id: \.self) { index in
-                VStack(alignment: .leading) {
-                    Text(quotes[index].quote)
-                        .font(.headline)
-                        .padding(10)
-                    Text("- \(quotes[index].author)")
-                        .font(.subheadline)
-                        .padding(10)
-                    Text("- \(quotes[index].category)")
-                        .font(.subheadline)
-                        .padding(10)
-                    Button(action: {
-                        quotes[index].favourite.toggle()
-                        updateFavoriteValue(quoteID: quotes[index].quote_id,
-                        isFavorite: quotes[index].favourite)
-                        if !quotes[index].favourite
-                        {
-                            self.quotes.remove(at: index)
-                            }
-                    }) {
-                        Image(systemName: quotes[index].favourite ? "heart.fill" : "heart")
-                            .foregroundColor(quotes[index].favourite ? .red : .black)
+            
+            if quoteData.favouriteQuotes.isEmpty {
+                Text("Visit Quotes to find your favorite quote.")
+                    .font(.subheadline)
+                    .padding()
+            } else {
+                
+                List(quoteData.favouriteQuotes.indices, id: \.self) { index in
+                    VStack(alignment: .leading) {
+                        Text(quoteData.favouriteQuotes[index].quote)
+                            .font(.headline)
                             .padding(10)
+                        Text("- \(quoteData.favouriteQuotes[index].author)")
+                            .font(.subheadline)
+                            .padding(10)
+                        Text("- \(quoteData.favouriteQuotes[index].category)")
+                            .font(.subheadline)
+                            .padding(10)
+                        Button(action: {
+                            quoteData.updateFavoriteValue(quoteID: quoteData.favouriteQuotes[index].quote_id, isFavorite: !quoteData.favouriteQuotes[index].favourite)
+                        }) {
+                            Image(systemName: quoteData.favouriteQuotes[index].favourite ? "heart.fill" : "heart")
+                                .foregroundColor(quoteData.favouriteQuotes[index].favourite ? .red : .black)
+                                .padding(10)
+                        }
+                        Spacer()
                     }
-                    Spacer()
+                    .padding()
                 }
-                .padding()
+                Spacer()
             }
-            Spacer()
         }
         .navigationTitle("Favourite")
         .onAppear {
-            if let loadedQuotes = FavouriteloaderFunction() {
-                self.quotes = loadedQuotes
-            } else {
-                self.quotes = []
-            }
+            quoteData.loadQuotes()
         }
     }
 }

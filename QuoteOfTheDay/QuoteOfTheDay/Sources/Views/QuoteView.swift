@@ -2,27 +2,26 @@ import SwiftUI
 
 struct QuoteView: View {
     @Environment(\.colorScheme) var colorScheme
-    
-    @State private var quotes: [Quote] = loadQuotes() ?? []
+    @ObservedObject var quoteData = QuoteData()
     @State private var searchText = ""
-    
+
     var filteredQuotes: [Quote] {
         if searchText.isEmpty {
-            return quotes
+            return quoteData.quotes
         } else {
-            return quotes.filter { quote in
+            return quoteData.quotes.filter { quote in
                 quote.quote.lowercased().contains(searchText.lowercased()) ||
                     quote.author.lowercased().contains(searchText.lowercased())
             }
         }
     }
-    
+
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(spacing: 10) {
                     SearchBar(text: $searchText)
-                    
+
                     ForEach(filteredQuotes.indices, id: \.self) { index in
                         VStack {
                             Text(filteredQuotes[index].quote)
@@ -37,11 +36,10 @@ struct QuoteView: View {
                                             gradient: Gradient(colors: [colorScheme == .light ? .purple : .gray, colorScheme == .light ? .orange : .white]),
                                             startPoint: .bottomLeading,
                                             endPoint: .bottomTrailing
-                                                  ))
+                                        ))
                                         .frame(width: 350, height: 200)
                                 )
-                    
-                            
+
                             NavigationLink(destination: AuthorDetailView(author: filteredQuotes[index].author,
                                                                          description: filteredQuotes[index].author_description ?? "",
                                                                          expertise: filteredQuotes[index].author_expertise ?? "",
@@ -56,12 +54,8 @@ struct QuoteView: View {
                                     Button(action: {
                                         toggleFavorite(for: filteredQuotes[index])
                                     }) {
-                                        Image(systemName: quotes[index].favourite ? "heart.fill" : "heart")
-                                            .foregroundColor(quotes[index].favourite ? .red : colorScheme == .light ? .black : .white)
-
-                                        Image(systemName: filteredQuotes[index].favourite ? "heart.fill" : "heart")
-                                            .foregroundColor(filteredQuotes[index].favourite ? .red : .black)
-
+                                        Image(systemName: quoteData.quotes[index].favourite ? "heart.fill" : "heart")
+                                            .foregroundColor(quoteData.quotes[index].favourite ? .red : colorScheme == .light ? .black : .white)
                                             .padding(.bottom)
                                     }
                                 }
@@ -73,12 +67,14 @@ struct QuoteView: View {
                 .padding(.vertical)
             }
         }
+        .onAppear {
+            quoteData.loadQuotes()
+        }
     }
-    
+
     private func toggleFavorite(for quote: Quote) {
-        if let index = quotes.firstIndex(where: { $0.quote_id == quote.quote_id }) {
-            quotes[index].favourite.toggle()
-            updateFavoriteValue(quoteID: quote.quote_id, isFavorite: quotes[index].favourite)
+        if let index = quoteData.quotes.firstIndex(where: { $0.quote_id == quote.quote_id }) {
+            quoteData.updateFavoriteValue(quoteID: quote.quote_id, isFavorite: !quoteData.quotes[index].favourite)
         }
     }
 }
@@ -91,12 +87,12 @@ struct QuoteView_Previews: PreviewProvider {
 
 struct SearchBar: View {
     @Binding var text: String
-    
+
     var body: some View {
         HStack {
             TextField("Search Quote || Author", text: $text)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-            
+
             Button(action: {
                 text = ""
             }) {

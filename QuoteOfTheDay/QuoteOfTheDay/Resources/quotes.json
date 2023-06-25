@@ -158,15 +158,15 @@
         },
         {
             "quote_id": 14,
-            "author": "Leonardo da Vinci",
+            "author": "Pablo Picasso",
             "category": "Creativity",
-            "quote": "Simplicity is the ultimate sophistication.",
+            "quote": "Every child is an artist. The problem is how to remain an artist once we grow up.",
             "favourite": false,
-            "author_description": "Leonardo da Vinci was an Italian polymath who is widely regarded as one of the greatest artists, inventors, and scientists of all time. He is known for masterpieces such as the 'Mona Lisa' and 'The Last Supper'.",
-            "author_expertise": "Art, Science, Invention",
-            "author_professions": "Artist, Inventor, Scientist",
-            "author_achievements": "None specified",
-            "author_detailed_data": "Leonardo da Vinci's contributions to art, science, and invention are unparalleled. His paintings, such as the 'Mona Lisa', are revered for their technical mastery and enigmatic beauty. Da Vinci's curiosity, creativity, and interdisciplinary approach continue to inspire and influence artists and thinkers across disciplines."
+            "author_description": "Pablo Picasso was a Spanish painter, sculptor, printmaker, ceramicist, and stage designer. He is widely regarded as one of the most influential artists of the 20th century.",
+            "author_expertise": "Painting, Sculpture, Printmaking",
+            "author_professions": "Artist",
+            "author_achievements": "Co-founder of Cubism",
+            "author_detailed_data": "Pablo Picasso's artistic career spanned over seven decades, during which he explored and revolutionized various art forms. His innovative approach to art, particularly his co-founding of Cubism, challenged traditional notions of representation and perspective. Picasso's quote highlights the importance of nurturing and preserving the creative spirit within us, even as we navigate adulthood."
         },
         {
             "quote_id": 15,
@@ -182,15 +182,15 @@
         },
         {
             "quote_id": 16,
-            "author": "Pablo Picasso",
+            "author": "Vincent van Gogh",
             "category": "Art",
-            "quote": "Every child is an artist. The problem is how to remain an artist once we grow up.",
+            "quote": "I dream my painting, and then I paint my dream.",
             "favourite": false,
-            "author_description": "Pablo Picasso was a Spanish painter, sculptor, and ceramicist. He is regarded as one of the most influential artists of the 20th century and co-founded the Cubist movement.",
-            "author_expertise": "Painting, Sculpture",
-            "author_professions": "Painter, Sculptor, Ceramicist",
+            "author_description": "Vincent van Gogh was a Dutch post-impressionist painter who is considered one of the most famous and influential figures in Western art history. His works are known for their bold colors, expressive brushwork, and emotional depth.",
+            "author_expertise": "Painting",
+            "author_professions": "Painter",
             "author_achievements": "None specified",
-            "author_detailed_data": "Pablo Picasso's innovative artistic style and prolific output have made him one of the most recognized and influential artists in history. He pushed the boundaries of artistic expression, constantly reinventing himself and challenging traditional norms. Picasso's impact on modern art is immeasurable."
+            "author_detailed_data": "Vincent van Gogh's artistic career was marked by intense passion and a unique artistic vision. He believed in painting from his imagination and capturing the emotions and essence of his subjects. Van Gogh's quote highlights the intimate connection between his dreams and his creative process, emphasizing the deeply personal nature of art and the power of artistic expression."
         },
         {
             "quote_id": 17,
@@ -314,15 +314,15 @@
         },
         {
             "quote_id": 27,
-            "author": "Steve Jobs",
+            "author": "Elon Musk",
             "category": "Innovation",
-            "quote": "Innovation distinguishes between a leader and a follower.",
+            "quote": "Some people don't like change, but you need to embrace change if the alternative is a disaster.",
             "favourite": false,
-            "author_description": "Steve Jobs was an American business magnate, industrial designer, and co-founder of Apple Inc. He played a pivotal role in the development of revolutionary products such as the iPhone and iPad.",
-            "author_expertise": "Technology, Design",
-            "author_professions": "Entrepreneur, Industrial Designer",
-            "author_achievements": "Co-founder of Apple Inc.",
-            "author_detailed_data": "Steve Jobs' visionary leadership and passion for innovation transformed multiple industries. He revolutionized personal computing, music, and mobile technology with products like the Macintosh, iPod, and iPhone. Jobs' relentless pursuit of excellence and his ability to anticipate and shape consumer trends have made him an icon of entrepreneurship."
+            "author_description": "Elon Musk is a business magnate, investor, and engineer. He is the founder, CEO, and chief engineer/designer of SpaceX; early investor, CEO, and product architect of Tesla, Inc.; and founder of The Boring Company.",
+            "author_expertise": "Technology, Aerospace",
+            "author_professions": "Entrepreneur, Engineer",
+            "author_achievements": "Founder of SpaceX and Tesla",
+            "author_detailed_data": "Elon Musk is known for his ambitious vision and commitment to pushing the boundaries of innovation. He has made significant contributions to the fields of electric vehicles, renewable energy, and space exploration. Musk's companies SpaceX and Tesla have disrupted their respective industries with groundbreaking advancements and transformative technologies."
         },
         {
             "quote_id": 28,
@@ -398,15 +398,15 @@
         },
         {
             "quote_id": 34,
-            "author": "Malala Yousafzai",
+            "author": "Malcolm X",
             "category": "Education",
-            "quote": "One child, one teacher, one book, one pen can change the world.",
+            "quote": "Education is the passport to the future, for tomorrow belongs to those who prepare for it today.",
             "favourite": false,
-            "author_description": "Malala Yousafzai is a Pakistani activist for female education and the youngest Nobel Prize laureate. She advocates for girls' right to education and has become a global symbol of female empowerment.",
-            "author_expertise": "Female Education, Activism",
-            "author_professions": "Activist",
-            "author_achievements": "Nobel Peace Prize (2014)",
-            "author_detailed_data": "Malala Yousafzai's courage and determination to fight for girls' education in Pakistan, despite facing a violent attack by the Taliban, have made her an inspiration to millions. Her advocacy work has raised global awareness about the importance of education in empowering individuals and building a more just and equal society."
+            "author_description": "Malcolm X was an African-American Muslim minister and human rights activist. He advocated for black empowerment, self-defense, and the pursuit of civil rights.",
+            "author_expertise": "Civil Rights, Black Empowerment",
+            "author_professions": "Minister, Activist",
+            "author_achievements": "Prominent Figure in the Civil Rights Movement",
+            "author_detailed_data": "Malcolm X emphasized the importance of education as a means of empowerment and liberation. He believed that education provides individuals with the tools to shape their own destiny and make a positive impact on society. Malcolm X's advocacy for education as a catalyst for social change continues to inspire generations in the pursuit of knowledge and equality."
         },
         {
             "quote_id": 35,
@@ -518,15 +518,15 @@
         },
         {
             "quote_id": 44,
-            "author": "Nelson Mandela",
+            "author": "Malala Yousafzai",
             "category": "Freedom",
-            "quote": "For to be free is not merely to cast off one's chains, but to live in a way that respects and enhances the freedom of others.",
+            "quote": "I raise up my voice—not so that I can shout, but so that those without a voice can be heard... We cannot succeed when half of us are held back.",
             "favourite": false,
-            "author_description": "Nelson Mandela was a South African anti-apartheid revolutionary, politician, and philanthropist. He served as the President of South Africa from 1994 to 1999 and is revered for his efforts to dismantle institutionalized racism.",
-            "author_expertise": "Anti-Apartheid Activism, Politics",
-            "author_professions": "Revolutionary, Politician, Philanthropist",
-            "author_achievements": "Nobel Peace Prize (1993), President of South Africa (1994-1999)",
-            "author_detailed_data": "Nelson Mandela's lifelong fight against apartheid and his unwavering commitment to reconciliation and equality have made him a global symbol of freedom and justice. He sacrificed his own freedom for the liberation of others and worked tirelessly to build a democratic and inclusive South Africa. Mandela's legacy serves as a reminder that true freedom involves not only personal liberation but also the upliftment of others."
+            "author_description": "Malala Yousafzai is a Pakistani activist for female education and the youngest Nobel Prize laureate. She gained international recognition for her advocacy of girls' education in her native Swat Valley in Khyber Pakhtunkhwa, Pakistan, where the local Taliban had banned girls from attending school.",
+            "author_expertise": "Female Education, Human Rights",
+            "author_professions": "Activist, Author",
+            "author_achievements": "Nobel Peace Prize (2014)",
+            "author_detailed_data": "Malala Yousafzai's courageous advocacy for girls' education has made her a global symbol of hope and empowerment. Despite facing violence and oppression, she has remained steadfast in her mission to ensure every girl has the right to receive an education. Malala's determination to amplify the voices of the voiceless and fight for equal rights serves as an inspiration for individuals and communities around the world."
         },
         {
             "quote_id": 45,
@@ -554,15 +554,15 @@
         },
         {
             "quote_id": 47,
-            "author": "Steve Jobs",
+            "author": "Albert Einstein",
             "category": "Innovation",
-            "quote": "Innovation distinguishes between a leader and a follower.",
+            "quote": "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution.",
             "favourite": false,
-            "author_description": "Steve Jobs was an American business magnate, industrial designer, and inventor. He co-founded Apple Inc. and played a significant role in revolutionizing the personal computer, smartphone, and music industries.",
-            "author_expertise": "Technology, Design",
-            "author_professions": "Business Magnate, Industrial Designer, Inventor",
-            "author_achievements": "Co-founder of Apple Inc.",
-            "author_detailed_data": "Steve Jobs' visionary leadership and commitment to innovation transformed multiple industries. He believed in pushing the boundaries of technology and design to create products that revolutionized the way we live and communicate. Jobs' quote serves as a reminder of the importance of embracing change and striving for continuous improvement."
+            "author_description": "Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. He is best known for his mass-energy equivalence formula E = mc².",
+            "author_expertise": "Physics",
+            "author_professions": "Theoretical Physicist",
+            "author_achievements": "Nobel Prize in Physics (1921)",
+            "author_detailed_data": "Albert Einstein's contributions to the field of physics revolutionized our understanding of the universe. His theory of relativity provided a new framework for understanding gravity and space-time. Einstein's innovative thinking and ability to envision new possibilities paved the way for countless scientific advancements and shaped the course of modern physics."
         },
         {
             "quote_id": 48,
