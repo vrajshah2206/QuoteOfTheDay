@@ -1,5 +1,5 @@
 import Foundation
-import UserNotifications
+
 class QuoteData: ObservableObject {
     @Published var quotes: [Quote] = []
     @Published var favouriteQuotes: [Quote] = []

@@ -1,5 +1,7 @@
 import SwiftUI
 import UIKit
+import AVFoundation
+
 
 struct QuoteView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -11,7 +13,8 @@ struct QuoteView: View {
     @State private var alertMessage: String = ""
     
     private let imageSavingHelper = ImageSavingHelper()
-
+    private let synthesizer = AVSpeechSynthesizer()
+    
     
     
     var filteredQuotes: [Quote] {
@@ -71,12 +74,26 @@ struct QuoteView: View {
                             }.padding(.vertical,-30)
                                 .padding(.horizontal,30)
                                 .frame(width: 350, height: 70,alignment: .trailing)
-                            Button(action: {
-                                quoteToSave = filteredQuotes[index].quote
-                                saveQuoteAsImage()
-                            }) {
-                                Text("Save")
+                            HStack { // Use HStack to arrange buttons horizontally
+                                Spacer()
+
+                                Button(action: {
+                                    quoteToSave = filteredQuotes[index].quote
+                                    saveQuoteAsImage()
+                                }) {
+                                    Text("Save")
+                                }
+                                Spacer()
+                                
+                                Button(action: {
+                                    let quoteToRead = filteredQuotes[index].quote
+                                    readQuoteAloud(quote: quoteToRead)
+                                }) {
+                                    Text("Listen")
+                                }
+                                Spacer()
                             }
+                            
                         }
                         .padding(.horizontal)
                     }
@@ -102,7 +119,7 @@ struct QuoteView: View {
     func saveQuoteAsImage() {
         // Convert SwiftUI view (Text) to a UIImage
         let image = textToImage(quote: quoteToSave, size: CGSize(width: 350, height: 200))
-
+        
         // Save the UIImage using the ImageSavingHelper
         imageSavingHelper.saveImage(image)
         imageSavingHelper.completion = { success in
@@ -112,41 +129,49 @@ struct QuoteView: View {
             }
         }
     }
+    func readQuoteAloud(quote: String) {
+        let utterance = AVSpeechUtterance(string: quote)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US") // You can adjust the language if needed
+        synthesizer.speak(utterance)
+    }
+    
     
 }
+
+
 func textToImage(quote: String, size: CGSize) -> UIImage {
     let renderer = UIGraphicsImageRenderer(size: size)
     let image = renderer.image { context in
         // Set the background colors using a gradient
         let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [UIColor.purple.cgColor, UIColor.orange.cgColor] as CFArray, locations: [0, 1])!
         context.cgContext.drawLinearGradient(gradient, start: CGPoint.zero, end: CGPoint(x: size.width, y: size.height), options: [])
-
+        
         // Set the text attributes for the quote text
         let textFont = UIFont.boldSystemFont(ofSize: 20)
-
+        
         let textAttributes: [NSAttributedString.Key: Any] = [
             .font: textFont,
             .foregroundColor: UIColor.white,
             .paragraphStyle: NSParagraphStyle()
         ]
-
+        
         // Create attributed string
         let attributedQuote = NSAttributedString(string: quote, attributes: textAttributes)
-
+        
         // Calculate the size of the text with padding on both sides
         let padding: CGFloat = 10
         let textSize = attributedQuote.boundingRect(with: CGSize(width: size.width - 2 * padding, height: size.height),
                                                     options: [.usesLineFragmentOrigin, .usesFontLeading],
                                                     context: nil).size
-
+        
         // Calculate the position to center the text
         let textX = (size.width - textSize.width) / 2
         let textY = (size.height - textSize.height) / 2
-
+        
         // Draw the text at the centered position with padding on both sides
         attributedQuote.draw(in: CGRect(x: textX + padding, y: textY, width: size.width - 2 * padding, height: size.height))
     }
-
+    
     return image
 }
 
@@ -179,11 +204,11 @@ struct SearchBar: View {
 }
 class ImageSavingHelper: NSObject {
     var completion: ((Bool) -> Void)?
-
+    
     func saveImage(_ image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
-
+    
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             print("Image saving error: \(error.localizedDescription)")

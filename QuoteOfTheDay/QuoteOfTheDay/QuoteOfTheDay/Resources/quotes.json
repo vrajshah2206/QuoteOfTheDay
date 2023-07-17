@@ -14,15 +14,15 @@
         },
         {
             "quote_id": 2,
-            "author": "Maya Angelou",
-            "category": "Inspiration",
-            "quote": "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
-            "favourite": true,
-            "author_description": "Maya Angelou was an American poet, memoirist, and civil rights activist. She is best known for her series of autobiographical books, including 'I Know Why the Caged Bird Sings'.",
-            "author_expertise": "Poetry, Memoir",
-            "author_professions": "Poet, Writer, Civil Rights Activist",
-            "author_achievements": "Presidential Medal of Freedom (2011)",
-            "author_detailed_data": "Maya Angelou's writing and activism focused on themes of identity, racism, and personal resilience. Her works, including poetry and memoirs, continue to inspire and empower readers. Angelou's contributions to literature and her commitment to civil rights made her a prominent figure in American culture."
+            "author": "Swami Vivekananda",
+            "category": "Empowerment",
+            "quote": "Arise, awake, and stop not until the goal is achieved.",
+            "favourite": false,
+            "author_description": "Swami Vivekananda was an Indian Hindu monk and a key figure in the introduction of Indian philosophies of Vedanta and Yoga to the Western world. He was a disciple of the revered Indian saint, Sri Ramakrishna Paramahamsa.",
+            "author_expertise": "Indian Philosophy, Vedanta, Yoga",
+            "author_professions": "Monk, Philosopher",
+            "author_achievements": "Founder of Ramakrishna Math and Ramakrishna Mission",
+            "author_detailed_data": "Swami Vivekananda was a visionary who dedicated his life to the spiritual upliftment of humanity. He played a crucial role in spreading the teachings of Vedanta and Yoga, emphasizing the unity of all religions and the divinity within every individual. His famous quote encapsulates the spirit of determination and relentless pursuit of one's goals."
         },
         {
             "quote_id": 3,
