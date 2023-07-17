@@ -15,4 +15,9 @@ struct QuoteOfTheDayApp: App {
             //ContentView()
         }
     }
+    init() {
+           LocalNotificationManager.requestPermission()
+           LocalNotificationManager.scheduleDailyNotification()
+       }
+
 }

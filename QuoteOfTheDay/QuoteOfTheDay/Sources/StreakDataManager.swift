@@ -1,5 +1,5 @@
 import Foundation
-
+import UserNotifications
 class StreakManager {
     static func getCurrentStreak() -> Int {
         let startDate = UserDefaults.standard.object(forKey: "StreakStartDate") as? Date

@@ -27,6 +27,7 @@
 		96EDD54E2A290DFB0088B916 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDD54D2A290DFB0088B916 /* ContentView.swift */; };
 		96EDD5502A290DFC0088B916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96EDD54F2A290DFC0088B916 /* Assets.xcassets */; };
 		96EDD5532A290DFC0088B916 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96EDD5522A290DFC0088B916 /* Preview Assets.xcassets */; };
+		A401619B2A65E1E8000C1DDE /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A401619A2A65E1E8000C1DDE /* LocalNotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		96EDD54D2A290DFB0088B916 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		96EDD54F2A290DFC0088B916 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96EDD5522A290DFC0088B916 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A401619A2A65E1E8000C1DDE /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalNotificationManager.swift; path = Models/LocalNotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				96EDD54B2A290DFB0088B916 /* QuoteOfTheDayApp.swift */,
 				961016C92A2B812500ED4B32 /* Models */,
 				961016CA2A2B822F00ED4B32 /* QuoteDataManager.swift */,
+				A401619A2A65E1E8000C1DDE /* LocalNotificationManager.swift */,
 				968E37762A488DCF00458292 /* QuoteData.swift */,
 				964AC4762A44A5C400851EBA /* StreakDataManager.swift */,
 			);
@@ -226,6 +229,7 @@
 				969B26DB2A2C4B6E001B4862 /* QuoteView.swift in Sources */,
 				961016CB2A2B822F00ED4B32 /* QuoteDataManager.swift in Sources */,
 				2A63326A2A2EC33700DE7B00 /* RandomQuoteView.swift in Sources */,
+				A401619B2A65E1E8000C1DDE /* LocalNotificationManager.swift in Sources */,
 				964AC4772A44A5C400851EBA /* StreakDataManager.swift in Sources */,
 				961016C72A2B80FA00ED4B32 /* Quote.swift in Sources */,
 				964AC4742A44A53900851EBA /* StreakModel.swift in Sources */,
