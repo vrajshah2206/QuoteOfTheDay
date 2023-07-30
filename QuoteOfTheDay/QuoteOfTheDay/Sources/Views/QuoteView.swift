@@ -11,7 +11,7 @@ struct QuoteView: View {
     @State private var alertMessage: String = ""
     
     private let imageSavingHelper = ImageSavingHelper()
-
+    
     
     
     var filteredQuotes: [Quote] {
@@ -27,66 +27,105 @@ struct QuoteView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(spacing: 10) {
-                    SearchBar(text: $searchText)
-                    
-                    ForEach(filteredQuotes.indices, id: \.self) { index in
-                        VStack {
-                            Text(filteredQuotes[index].quote)
-                                .font(.headline)
-                                .foregroundColor(colorScheme == .light ? .white : .black)
-                                .padding(25)
-                                .multilineTextAlignment(.center)
-                                .frame(width: 350, height: 230)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .fill(LinearGradient(
-                                            gradient: Gradient(colors: [colorScheme == .light ? .purple : .gray, colorScheme == .light ? .orange : .white]),
-                                            startPoint: .bottomLeading,
-                                            endPoint: .bottomTrailing
-                                        ))
-                                        .frame(width: 350, height: 200)
-                                )
-                            
-                            NavigationLink(destination: AuthorDetailView(author: filteredQuotes[index].author,
-                                                                         description: filteredQuotes[index].author_description ?? "",
-                                                                         expertise: filteredQuotes[index].author_expertise ?? "",
-                                                                         professions: filteredQuotes[index].author_professions ?? "",
-                                                                         achievements: filteredQuotes[index].author_achievements ?? "",
-                                                                         detailedData: filteredQuotes[index].author_detailed_data ?? "")) {
-                                HStack {
-                                    Text("- \(filteredQuotes[index].author)")
-                                        .font(.subheadline)
-                                        .foregroundColor(colorScheme == .light ? .gray : .white)
-                                        .padding(.bottom)
-                                    Button(action: {
-                                        toggleFavorite(for: filteredQuotes[index])
-                                    }) {
-                                        Image(systemName: quoteData.quotes[index].favourite ? "heart.fill" : "heart")
-                                            .foregroundColor(quoteData.quotes[index].favourite ? .red : colorScheme == .light ? .black : .white)
+            VStack(spacing:10) {
+                SearchBar(text: $searchText)
+                ScrollView {
+                    VStack(spacing: 1) {
+                        ForEach(filteredQuotes.indices, id: \.self) { index in
+                            VStack {
+                                Text(filteredQuotes[index].quote)
+                                
+                                    .font(.headline)
+                                    .foregroundColor(colorScheme == .light ? .white : .black)
+                                    .padding(15)
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: 350, height: 230)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 20)
+                                            .fill(LinearGradient(
+                                                gradient: Gradient(colors: [colorScheme == .light ? .purple : .gray, colorScheme == .light ? .orange : .white]),
+                                                startPoint: .bottomLeading,
+                                                endPoint: .bottomTrailing
+                                            ))
+                                            .frame(width: 350, height: 230))
+                                
+                                NavigationLink(destination: AuthorDetailView(author: filteredQuotes[index].author,
+                                                                             description: filteredQuotes[index].author_description ?? "",
+                                                                             expertise: filteredQuotes[index].author_expertise ?? "",
+                                                                             professions: filteredQuotes[index].author_professions ?? "",
+                                                                             achievements: filteredQuotes[index].author_achievements ?? "",
+                                                                             detailedData: filteredQuotes[index].author_detailed_data ?? "")) {
+                                    VStack {
+                                        Text("- \(filteredQuotes[index].author)")
+                                        
+                                            .font(.footnote)
+                                            .underline()
+                                            .foregroundColor(.blue)
                                             .padding(.bottom)
                                     }
                                 }
-                            }.padding(.vertical,-30)
-                                .padding(.horizontal,30)
-                                .frame(width: 350, height: 70,alignment: .trailing)
-                            Button(action: {
-                                quoteToSave = filteredQuotes[index].quote
-                                saveQuoteAsImage()
-                            }) {
-                                Text("Save")
+                                                                             .frame(width: 350, height: 50,alignment: .bottomTrailing)
+                                GeometryReader { geometry in
+                                    HStack(spacing: 0) {
+                                        Spacer()
+                                        Button(action: {
+                                            quoteToSave = filteredQuotes[index].quote
+                                            saveQuoteAsImage()
+                                        }) {
+                                            Text("Save")
+                                                .padding(.vertical)
+                                                .frame(width: geometry.size.width / 2)
+                                                .font(.headline)
+                                        }
+                                        Spacer()
+                                        Divider()
+                                        Spacer()
+                                        Button(action: {
+                                            toggleFavorite(for: filteredQuotes[index])
+                                        }) {
+                                            Image(systemName: quoteData.quotes[index].favourite ? "heart.fill" : "heart")
+                                                .font(.system(size: 30))
+                                                .foregroundColor(quoteData.quotes[index].favourite ? .red : colorScheme == .light ? .black : .white)
+                                            
+                                                .frame(width: geometry.size.width / 2)
+                                        }
+                                    }
+                                    
+                                }
+                                .frame(width: 350, height: 60, alignment: .leading)
+                                .background(Color.white.opacity(0.6))
+                                .padding(.bottom, 50)
+                                Divider()
+                                
+                                
                             }
+                            .padding(.horizontal)
+        
+                            Divider()
+                            
                         }
-                        .padding(.horizontal)
                     }
+                    
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Image Saved"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                    }
+                    .padding(.vertical)
                 }
-                .alert(isPresented: $showAlert) {
-                    Alert(title: Text("Image Saved"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-                }
-                .padding(.vertical)
+                .padding(.top, 1)
+                .padding(.bottom, 1)
+                
             }
+            
+            .background(colorScheme == .light ?
+                        Image("12")
+                .resizable()
+                .edgesIgnoringSafeArea(.all) :  Image("15")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
+            )
         }
+        .padding(.top, 1)
+        .padding(.bottom, 1)
         .onAppear {
             quoteData.loadQuotes()
             
@@ -102,7 +141,7 @@ struct QuoteView: View {
     func saveQuoteAsImage() {
         // Convert SwiftUI view (Text) to a UIImage
         let image = textToImage(quote: quoteToSave, size: CGSize(width: 350, height: 200))
-
+        
         // Save the UIImage using the ImageSavingHelper
         imageSavingHelper.saveImage(image)
         imageSavingHelper.completion = { success in
@@ -120,33 +159,33 @@ func textToImage(quote: String, size: CGSize) -> UIImage {
         // Set the background colors using a gradient
         let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [UIColor.purple.cgColor, UIColor.orange.cgColor] as CFArray, locations: [0, 1])!
         context.cgContext.drawLinearGradient(gradient, start: CGPoint.zero, end: CGPoint(x: size.width, y: size.height), options: [])
-
+        
         // Set the text attributes for the quote text
         let textFont = UIFont.boldSystemFont(ofSize: 20)
-
+        
         let textAttributes: [NSAttributedString.Key: Any] = [
             .font: textFont,
             .foregroundColor: UIColor.white,
             .paragraphStyle: NSParagraphStyle()
         ]
-
+        
         // Create attributed string
         let attributedQuote = NSAttributedString(string: quote, attributes: textAttributes)
-
+        
         // Calculate the size of the text with padding on both sides
         let padding: CGFloat = 10
         let textSize = attributedQuote.boundingRect(with: CGSize(width: size.width - 2 * padding, height: size.height),
                                                     options: [.usesLineFragmentOrigin, .usesFontLeading],
                                                     context: nil).size
-
+        
         // Calculate the position to center the text
         let textX = (size.width - textSize.width) / 2
         let textY = (size.height - textSize.height) / 2
-
+        
         // Draw the text at the centered position with padding on both sides
         attributedQuote.draw(in: CGRect(x: textX + padding, y: textY, width: size.width - 2 * padding, height: size.height))
     }
-
+    
     return image
 }
 
@@ -179,11 +218,11 @@ struct SearchBar: View {
 }
 class ImageSavingHelper: NSObject {
     var completion: ((Bool) -> Void)?
-
+    
     func saveImage(_ image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
-
+    
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             print("Image saving error: \(error.localizedDescription)")
