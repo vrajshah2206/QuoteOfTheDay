@@ -1,5 +1,6 @@
 import SwiftUI
 import UIKit
+import AVFoundation
 
 struct QuoteView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -11,7 +12,17 @@ struct QuoteView: View {
     @State private var alertMessage: String = ""
     
     private let imageSavingHelper = ImageSavingHelper()
+    private let synthesizer = AVSpeechSynthesizer()
     
+    private func shareQuoteOnSocialMedia(quote: String) {
+        let activityViewController = UIActivityViewController(activityItems: [quote], applicationActivities: nil)
+        
+        if let topViewController = UIApplication.shared.windows.first?.rootViewController {
+            activityViewController.popoverPresentationController?.sourceView = topViewController.view
+        }
+        
+        UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true, completion: nil)
+    }
     
     var filteredQuotes: [Quote] {
         if searchText.isEmpty {
@@ -28,7 +39,6 @@ struct QuoteView: View {
         NavigationView {
             VStack(spacing:10) {
                 SearchBar(text: $searchText)
-                Divider()
                 ScrollView {
                     VStack(spacing: 1) {
                         ForEach(filteredQuotes.indices, id: \.self) { index in
@@ -57,12 +67,14 @@ struct QuoteView: View {
                                                                              detailedData: filteredQuotes[index].author_detailed_data ?? "")) {
                                     VStack {
                                         Text("- \(filteredQuotes[index].author)")
-                                            .font(.title3)
-                                            .foregroundColor(.blue)
                                         
+                                            .font(.footnote)
+                                            .underline()
+                                            .foregroundColor(.blue)
+                                            .padding(.bottom)
                                     }
                                 }
-                                                                             .frame(width: 350, height: 50)
+                                                                             .frame(width: 350, height: 50,alignment: .bottomTrailing)
                                 GeometryReader { geometry in
                                     HStack(spacing: 0) {
                                         Spacer()
@@ -71,13 +83,13 @@ struct QuoteView: View {
                                             saveQuoteAsImage()
                                         }) {
                                             Text("Save")
-                                                .font(.system(size: 20))
-                                                .frame(width: geometry.size.width / 2)
+                                                .padding(.vertical)
+                                                .frame(width: geometry.size.width / 4)
                                                 .font(.headline)
                                         }
-                                        
+                                       // Spacer()
                                         Divider()
-                                        
+                                      //  Spacer()
                                         Button(action: {
                                             toggleFavorite(for: filteredQuotes[index])
                                         }) {
@@ -85,17 +97,60 @@ struct QuoteView: View {
                                                 .font(.system(size: 30))
                                                 .foregroundColor(quoteData.quotes[index].favourite ? .red : colorScheme == .light ? .black : .white)
                                             
-                                                .frame(width: geometry.size.width / 2)
+                                                .frame(width: geometry.size.width / 4)
                                         }
+                                       // Spacer()
+                                        Divider()
+                                       // Spacer()
+                                        
+                                        Button(action: {
+                                            let quoteToRead = filteredQuotes[index].quote
+                                            readQuoteAloud(quote: quoteToRead)
+                                        }) {
+                                            Image(systemName: "speaker.zzz")
+                                                .font(.system(size: 30))
+                                                .foregroundColor(.black)
+                                                .frame(width: geometry.size.width / 4)
+                                                .font(.headline)
+                                            
+                                           // Text("Listen")
+                                             //   .font(.headline)
+                                               // .padding(.vertical)
+                                                
+                                            
+                                        }
+                                        Divider()
+                                        
+                                        
+                                        
+                                        
+                                        Button(action: {
+                                            let quote = filteredQuotes[index].quote
+                                            shareQuoteOnSocialMedia(quote: quote)
+                                        }) {
+                                            Text("Share")
+                                                .font(.headline)
+                                               // .padding(.vertical)
+                                                .frame(width: geometry.size.width / 4)
+                                                .font(.headline)
+                                                
+                                            //Image(systemName: "square.and.arrow.up")
+                                              //  .foregroundColor(.blue)
+                                        }
+                                    
                                     }
                                     
                                 }
-                                .frame(width: 350, height: 50, alignment: .leading)
+                                .frame(width: 350, height: 60, alignment: .leading)
                                 .background(Color.white.opacity(0.6))
                                 .padding(.bottom, 50)
                                 Divider()
-                       
+                                
+                                
                             }
+                            .padding(.horizontal)
+                            
+                            Divider()
                             
                         }
                     }
@@ -144,6 +199,12 @@ struct QuoteView: View {
                 alertMessage = success ? "Image saved successfully!" : "Failed to save image."
             }
         }
+    }
+    
+    func readQuoteAloud(quote: String) {
+        let utterance = AVSpeechUtterance(string: quote)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US") // You can adjust the language if needed
+        synthesizer.speak(utterance)
     }
     
 }
@@ -227,3 +288,5 @@ class ImageSavingHelper: NSObject {
         }
     }
 }
+
+
