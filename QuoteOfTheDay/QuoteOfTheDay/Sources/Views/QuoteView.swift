@@ -13,7 +13,6 @@ struct QuoteView: View {
     private let imageSavingHelper = ImageSavingHelper()
     
     
-    
     var filteredQuotes: [Quote] {
         if searchText.isEmpty {
             return quoteData.quotes
