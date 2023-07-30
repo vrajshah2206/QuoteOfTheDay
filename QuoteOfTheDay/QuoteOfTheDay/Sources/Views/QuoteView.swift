@@ -28,6 +28,7 @@ struct QuoteView: View {
         NavigationView {
             VStack(spacing:10) {
                 SearchBar(text: $searchText)
+                Divider()
                 ScrollView {
                     VStack(spacing: 1) {
                         ForEach(filteredQuotes.indices, id: \.self) { index in
@@ -56,14 +57,12 @@ struct QuoteView: View {
                                                                              detailedData: filteredQuotes[index].author_detailed_data ?? "")) {
                                     VStack {
                                         Text("- \(filteredQuotes[index].author)")
-                                        
-                                            .font(.footnote)
-                                            .underline()
+                                            .font(.title3)
                                             .foregroundColor(.blue)
-                                            .padding(.bottom)
+                                        
                                     }
                                 }
-                                                                             .frame(width: 350, height: 50,alignment: .bottomTrailing)
+                                                                             .frame(width: 350, height: 50)
                                 GeometryReader { geometry in
                                     HStack(spacing: 0) {
                                         Spacer()
@@ -72,13 +71,13 @@ struct QuoteView: View {
                                             saveQuoteAsImage()
                                         }) {
                                             Text("Save")
-                                                .padding(.vertical)
+                                                .font(.system(size: 20))
                                                 .frame(width: geometry.size.width / 2)
                                                 .font(.headline)
                                         }
-                                        Spacer()
+                                        
                                         Divider()
-                                        Spacer()
+                                        
                                         Button(action: {
                                             toggleFavorite(for: filteredQuotes[index])
                                         }) {
@@ -91,16 +90,12 @@ struct QuoteView: View {
                                     }
                                     
                                 }
-                                .frame(width: 350, height: 60, alignment: .leading)
+                                .frame(width: 350, height: 50, alignment: .leading)
                                 .background(Color.white.opacity(0.6))
                                 .padding(.bottom, 50)
                                 Divider()
-                                
-                                
+                       
                             }
-                            .padding(.horizontal)
-        
-                            Divider()
                             
                         }
                     }

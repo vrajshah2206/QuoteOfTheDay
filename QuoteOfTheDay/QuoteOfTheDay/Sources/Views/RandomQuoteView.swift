@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RandomQuoteView: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var size = 0.8
     @State private var opacity = 0.5
 
@@ -33,25 +34,48 @@ struct RandomQuoteView: View {
     }
 
     var body: some View {
-        VStack {
-            if let quote = randomQuote {
-                Text(quote.quote)
-                    .font(.title)
-                    .multilineTextAlignment(.center)
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(10)
-                    .padding()
-
-                Text("\(quote.author)")
-                    .font(.title2)
-                    .foregroundColor(.gray)
-            } else {
-                Text("No quotes available")
-                    .foregroundColor(.red)
-            }
-        }
+        NavigationView {
+                    VStack {
+                        VStack {
+                            if let quote = randomQuote {
+                                Text(quote.quote)
+                                    .font(.title3)
+                                    .frame(width: 350, height: 230)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal)
+                                    .foregroundColor(.white)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 20)
+                                            .fill(LinearGradient(
+                                                gradient: Gradient(colors: [colorScheme == .light ? .purple : .gray, colorScheme == .light ? .blue : .white]),
+                                                startPoint: .bottomLeading,
+                                                endPoint: .bottomTrailing
+                                            ))
+                                            .frame(width: 350, height: 230))
+                                    .cornerRadius(10)
+                                
+                                
+                                Text("\(quote.author)")
+                                    .font(.title2)
+                                    .foregroundColor(.black)
+                            } else {
+                                Text("No quotes available")
+                                    .foregroundColor(.red)
+                            }
+                        }
+                       
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding(3)
+                    .background( colorScheme == .light ?
+                                 Image("11")
+                        .resizable()
+                        .edgesIgnoringSafeArea(.all) :  Image("14")
+                        .resizable()
+                        .edgesIgnoringSafeArea(.all)
+                    )
+                    
+                }
         .onAppear(perform: generateRandomQuote)
     }
 }
