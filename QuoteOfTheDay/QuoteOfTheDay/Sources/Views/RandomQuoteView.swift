@@ -133,6 +133,8 @@ struct RandomQuoteView: View {
                     
                     
                 }
+        .padding(.top, 1)
+        .padding(.bottom, 1)
         .onAppear(perform: generateRandomQuote)
     }
 }

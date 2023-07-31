@@ -58,6 +58,8 @@ struct FavouriteView: View {
             }
         }
         .navigationTitle("Favourite")
+        .padding(.top, 1)
+        .padding(.bottom, 1)
         .onAppear {
             quoteData.loadQuotes()
         }
