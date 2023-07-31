@@ -24,21 +24,28 @@ struct FavouriteView: View {
                     VStack(alignment: .leading) {
                         Text(quoteData.favouriteQuotes[index].quote)
                             .font(.headline)
-                            .padding(10)
+                        
                         Text("- \(quoteData.favouriteQuotes[index].author)")
-                            .font(.subheadline)
-                            .padding(10)
-                        Text("- \(quoteData.favouriteQuotes[index].category)")
-                            .font(.subheadline)
-                            .padding(10)
-                        Button(action: {
-                            quoteData.updateFavoriteValue(quoteID: quoteData.favouriteQuotes[index].quote_id, isFavorite: !quoteData.favouriteQuotes[index].favourite)
-                        }) {
-                            Image(systemName: quoteData.favouriteQuotes[index].favourite ? "heart.fill" : "heart")
-                                .foregroundColor(quoteData.favouriteQuotes[index].favourite ? .red : colorScheme == .light ? .black : .white)
+                            .font(.system(size: 14, design: .monospaced))
+                        Spacer()
+                        Divider()
+                        HStack(alignment: .bottom) {
+                            Text("Category: \(quoteData.favouriteQuotes[index].category)")
+                                .font(.system(size: 12, design: .rounded))
                                 .padding(10)
+                            Spacer()
+                           
+                            Button(action: {
+                                quoteData.updateFavoriteValue(quoteID: quoteData.favouriteQuotes[index].quote_id, isFavorite: !quoteData.favouriteQuotes[index].favourite)
+                            }) {
+                                Image(systemName: quoteData.favouriteQuotes[index].favourite ? "heart.fill" : "heart")
+                                    .foregroundColor(quoteData.favouriteQuotes[index].favourite ? .red : colorScheme == .light ? .black : .white)
+                                    .padding(10)
+                                    .font(.system(size: 30))
+                                
+                            }
+                            .buttonStyle(PlainButtonStyle())
                         }
-                        .buttonStyle(PlainButtonStyle())
                     }
                     .padding()
                     .background(
