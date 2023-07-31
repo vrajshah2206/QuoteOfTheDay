@@ -24,7 +24,7 @@ struct FavouriteView: View {
                     VStack(alignment: .leading) {
                         Text(quoteData.favouriteQuotes[index].quote)
                             .font(.headline)
-                        
+                            .padding(.bottom, 1)
                         Text("- \(quoteData.favouriteQuotes[index].author)")
                             .font(.system(size: 14, design: .monospaced))
                         Spacer()
