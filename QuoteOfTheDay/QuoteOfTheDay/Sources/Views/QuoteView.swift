@@ -44,8 +44,7 @@ struct QuoteView: View {
                         ForEach(filteredQuotes.indices, id: \.self) { index in
                             VStack {
                                 Text(filteredQuotes[index].quote)
-                                
-                                    .font(.headline)
+                                    .font(.subheadline)
                                     .foregroundColor(colorScheme == .light ? .white : .black)
                                     .padding(15)
                                     .multilineTextAlignment(.center)
@@ -68,7 +67,8 @@ struct QuoteView: View {
                                     VStack {
                                         Text("- \(filteredQuotes[index].author)")
                                         
-                                            .font(.footnote)
+                                        
+                                            .font(.system(size: 14, design: .monospaced))
                                             .underline()
                                             .foregroundColor(.blue)
                                             .padding(.bottom)
@@ -87,21 +87,9 @@ struct QuoteView: View {
                                                 .frame(width: geometry.size.width / 4)
                                                 .font(.headline)
                                         }
-                                       // Spacer()
+   
                                         Divider()
-                                      //  Spacer()
-                                        Button(action: {
-                                            toggleFavorite(for: filteredQuotes[index])
-                                        }) {
-                                            Image(systemName: quoteData.quotes[index].favourite ? "heart.fill" : "heart")
-                                                .font(.system(size: 30))
-                                                .foregroundColor(quoteData.quotes[index].favourite ? .red : colorScheme == .light ? .black : .white)
-                                            
-                                                .frame(width: geometry.size.width / 4)
-                                        }
-                                       // Spacer()
-                                        Divider()
-                                       // Spacer()
+                                 
                                         
                                         Button(action: {
                                             let quoteToRead = filteredQuotes[index].quote
@@ -120,10 +108,7 @@ struct QuoteView: View {
                                             
                                         }
                                         Divider()
-                                        
-                                        
-                                        
-                                        
+               
                                         Button(action: {
                                             let quote = filteredQuotes[index].quote
                                             shareQuoteOnSocialMedia(quote: quote)
@@ -136,6 +121,16 @@ struct QuoteView: View {
                                                 
                                             //Image(systemName: "square.and.arrow.up")
                                               //  .foregroundColor(.blue)
+                                        }
+                                        Divider()
+                                        Button(action: {
+                                            toggleFavorite(for: filteredQuotes[index])
+                                        }) {
+                                            Image(systemName: quoteData.quotes[index].favourite ? "heart.fill" : "heart")
+                                                .font(.system(size: 30))
+                                                .foregroundColor(quoteData.quotes[index].favourite ? .red : colorScheme == .light ? .black : .white)
+                                            
+                                                .frame(width: geometry.size.width / 4)
                                         }
                                     
                                     }
